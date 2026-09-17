@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n,m; //O(1) constant time
+    cin>>n>>m;
+
+    // overall complexity O(m+n) (linear)
+    for(int i= 1; i<n; i++) //n
+    {
+        cout<<i<<"";
+    }
+    for(int i= 1; i<m; i++) //m
+    {
+        cout<<i<<"";
+    }
+
+    // overall complexity O(mn)
+    for(int i= 1; i<n; i++) //n
+    {
+        for(int i; i<m; i++) //m
+        {
+            cout<<i<<"";
+        }
+    }
+
+    // overall complexity O(n^2) quadratic
+    for(int i= 1; i<n; i++) //n
+    {
+        for(int i; i<m; i++) //m
+        {
+            cout<<i<<"";
+        }
+    }
+    
+    // overall complexity O(n/2)=log
+    for(int i= 1; i<n; i=i/2) //n
+    {
+        cout<<i<<"";
+    }
+
+    return 0;
+}
+
